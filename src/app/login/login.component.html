@@ -1,0 +1,39 @@
+
+<div class="backimg">
+  <div class="container">
+    <div class="card" style="width:50%;height:500px;">
+        <img class="card-img-top" src="../../assets/images/hosp3.jpg" alt="Card image cap" height="300px" >
+        <div class="card-body">
+            <form class="card-text">
+              <div class="form-group">
+                <div class="row">
+                    <div class="col col-md-4">
+                      <label for="username">User Email</label>
+                    </div>
+                    <div class="col col-md-8">
+                      <input type="email" [(ngModel)]="l.email" name="email" placeholder="Enter email id">
+                    </div>   
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <div class="row">
+                    <div class="col col-md-4">
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="col col-md-8">
+                      <input type="password"  [(ngModel)]="l.password" name="password" placeholder="********">
+                    </div>   
+                </div>
+              </div>
+
+               <div style="margin-top:20px ;">
+                 <button type="submit" id="request-btn" (click)="signUp()">Login</button>
+               </div>
+              </form>
+        </div>
+      </div>
+</div>
+<br>
+<br>
+</div>

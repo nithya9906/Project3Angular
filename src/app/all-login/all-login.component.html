@@ -1,0 +1,40 @@
+<div class="gifImg">
+  
+        <div class="container">
+            <!-- code here -->
+            <div class="card" style="width: 50%;">
+                <img src="../../assets/images/hosp3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+               
+                    <form id="requestForm" class="card-text">
+                        <h3><i class="heading">Login</i></h3>
+                        <br>
+                        <div class="form-group">
+                            <div class="col col-md-4">
+                                <label for="username">User Email</label>
+                              </div>
+                              <div class="col col-md-8">
+                                <input type="email" [(ngModel)]="l.email" name="email" placeholder="Enter email id">
+                              </div>   
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                  <label for="password">Password</label>
+                                </div>
+                                <div class="col col-md-8">
+                                  <input type="password"  [(ngModel)]="l.password" name="password" placeholder="********">
+                                </div>   
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" id="request-btn" (click)="signUp()">Login</button>
+                        </div>
+                    </form>
+        
+                </div>
+              </div>
+        </div>
+        
+   
+</div>

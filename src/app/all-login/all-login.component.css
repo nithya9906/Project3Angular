@@ -1,0 +1,34 @@
+.gifImg{
+    background-image: url('../../assets/images/bg1.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+       
+    padding: 10px;
+    padding-top: 30px;
+   text-align: center;
+   opacity: 1.0;
+    
+}
+.container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+#request-btn{
+    font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: #9b0519;
+	color: #FFF;
+	border: 0;
+	
+    }
+    #request-btn:hover{
+        background-color: #3678da;
+    }
