@@ -22,13 +22,15 @@ import { UpdatePasswordComponent } from './update-password/update-password.compo
 import { LogoutComponent } from './logout/logout.component';
 import { AddReceptionistComponent } from './add-receptionist/add-receptionist.component';
 import { DocheaderComponent } from './doctor/docheader/docheader.component';
+import { AdminheaderComponent } from './admin/adminheader/adminheader.component';
+import { RecepheaderComponent } from './receptionist/recepheader/recepheader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
+
     LoginComponent,
-  
+
     DoctorProfileComponent,
       
        AddPrescriptionComponent,
@@ -40,16 +42,18 @@ import { DocheaderComponent } from './doctor/docheader/docheader.component';
        UpdatePasswordComponent,
        LogoutComponent,
        AddReceptionistComponent,
-       DocheaderComponent
+       DocheaderComponent,
+       AdminheaderComponent,
+       RecepheaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [CommonUserServiceService,DoctorServiceService],
-  bootstrap: [AppComponent]
+  providers: [CommonUserServiceService, DoctorServiceService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

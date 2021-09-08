@@ -20,10 +20,10 @@ value:any;
 
   updateProfile()
   {
-   this.router.navigate(['upProfile']); 
+   this.router.navigate(['login','upProfile']); 
   }
   updatePassword(){
-    this.router.navigate(['upPassword']); 
+    this.router.navigate(['login','upPassword']); 
   }
 
 }

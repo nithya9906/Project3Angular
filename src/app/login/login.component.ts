@@ -45,32 +45,35 @@ export class LoginComponent implements OnInit {
     //this.data1=data;
     if(data1.stat==true )
     {
-      if(data1.role="doctor")
+      if(data1.role=="doctor")
       {
         this.comService.setUserLoggedIn(data1.userId);
         alert("Success");
-        this.router.navigate(['header']);
+        this.router.navigate(['login', 'header']);
        // this.router.navigate(['doctorProfile']);
     
 
       }
-      else if(data1.role="patient")
+      else if(data1.role=="patient")
       {
         this.comService.setUserLoggedIn(data1.userId);
         alert("Success");
        
 
       }
-      else if(data1.role="receptionist")
+      else if(data1.role=="receptionist")
       {
         this.comService.setUserLoggedIn(data1.userId);
-        alert("Success");
+        alert("Receptionist Success");
+        this.router.navigate(['login', 'rheader']);
 
       }
-      else if(data1.role="admin")
+      else if(data1.role=="admin")
       {
         this.comService.setUserLoggedIn(data1.userId);
+
         alert("Success");
+        this.router.navigate(['login', 'aheader']);
 
       }
 

@@ -1,3 +1,4 @@
+<app-adminheader></app-adminheader>
 <div>
     <h1>{{message}}</h1>
 </div>
@@ -10,29 +11,29 @@
                               </span></legend>
                     <div class="form-group">
                         <label for="name">FIRST NAME :</label>
-                        <input required type="text" [(ngModel)]="b.firstName" name="bookName" id="bookName"
-                            class="form-control phone" maxlength="28" placeholder="Doctor's first name...." />
+                        <input required type="text" [(ngModel)]="b.firstName" name="firstName" id="firstName"
+                            class="form-control" maxlength="28" placeholder="Doctor's first name...." />
                     </div>
                     <div class="form-group">
                         <label for="name">LAST NAME: </label>
-                        <input required type="text" [(ngModel)]="b.lastName" name="authorName" id="authorName"
-                            class="form-control phone" maxlength="28" placeholder="Doctor's last name...." />
+                        <input required type="text" [(ngModel)]="b.lastName" name="lastName" id="lastName"
+                            class="form-control" maxlength="28" placeholder="Doctor's last name...." />
                     </div>
                     <div class="form-group">
                         <label for="name">EMAIL ID: </label>
-                        <input required type="email" [(ngModel)]="b.email" name="description" id="description"
-                            class="form-control phone" maxlength="20000" placeholder="Doctor's Email id...." />
+                        <input required type="email" [(ngModel)]="b.email" name="email" id="email"
+                            class="form-control" maxlength="20000" placeholder="Doctor's Email id...." />
                     </div>
 
                     <div class="form-group">
                         <label for="name">PHONE NO: </label>
                         <input required type="number" [(ngModel)]="b.phno" name="phno" id="phno"
-                            class="form-control phone" maxlength="20000" placeholder="Doctor's contact number...." />
+                            class="form-control phone" maxlength="10" placeholder="Doctor's contact number...." />
                     </div>
 
                     <div class="form-group">
                         <label for="salary">DOCTOR FEE: </label>
-                        <input class="form-control" type="number" [(ngModel)]="b.fees" name="fees" id="bookPrice" 
+                        <input class="form-control" type="number" [(ngModel)]="b.fees" name="fees" id="fees" 
                             placeholder="Doctor Fee.." required />
                         <div id="errLast"></div>
                     </div>

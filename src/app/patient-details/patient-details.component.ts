@@ -22,7 +22,7 @@ value:any;
 
   goPrescription()
   {
-    this.router.navigate(['addp']);
+    this.router.navigate(['login','addp']);
   }
 
 }

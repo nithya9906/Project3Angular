@@ -13,7 +13,7 @@ export class AddPrescriptionComponent implements OnInit {
   val:any;
   pid:number=0;
   appid:number=0;
-  p:Prescription=new Prescription()
+  p:Prescription|any={};
   constructor(private comService:CommonUserServiceService,private http:HttpClient) {
     
    // comService.setUserLoggedIn(14)

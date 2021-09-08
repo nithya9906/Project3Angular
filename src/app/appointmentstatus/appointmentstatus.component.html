@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 70%;
+      top: 30%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #58bedd;
+      color: white;
+      top: 30%;
+    }
+    
+    .navbar-inverse .navbar-nav > li > a {
+        color: #c5c5c5;
+    }
+    .navbar {
+        border-radius: 0;
+    }
+    
+    
+    </style> 
+</head>
+<body>
+
+    <br>
+    <br>
+    <br>
+
+ 
+
+    <form>
+      <div class="form-group">
+          <div class="row">
+              <div class="col col-md-8">
+                  <input type="date" name="date1" id="date1"  [(ngModel)]="date1" placeholder="Enter Date" class="form-control">
+                 
+              </div>
+              <div class="col col-md-4">
+                  <button type="button" class="btn btn-primary" (click)="allrequests(this.date1)" style="float:left;">Search</button>
+              </div>
+          </div>
+      </div>
+  </form>
+
+  <table id="customers" style="margin-left: 10%;" >
+    <tr>
+      <th *ngFor="let column of headers">
+        {{column}}
+      </th>
+      
+    </tr>
+  
+   <tr *ngFor="let row of value">
+        <td>{{row.applicationId}}</td>
+        <td>{{row.applicationDate}}</td><!-- | date: "MM/dd/yy"    | date: "hh:mm a":"GM-->
+        <td>{{row.applicationDate }}</td>
+        <td>{{row.purpose}}</td>
+        <td>{{row.availability}}</td>
+        <td>{{row.doctor.doctorId}}</td>
+        <td>{{row.patient.p_id}}</td>
+        <td>{{row.patient.firstName}}</td>
+        <td><button (click)="confirmAppointment(this.row.patient.p_id,this.row)" class="btn btn-success">Confirm</button></td>
+        <td><button class="btn btn-warning" (click)="cancelAppointment(this.row,this.row.patient.p_id)">Cancel</button></td>
+        <td><button class="btn btn-primary" (click)="goingIn(this.row,this.row.patient.p_id)">Going In</button>
+        <td><button class="btn btn-primary" (click)="downloadTest(this.row)">Generate</button>
+      </tr>      
+    
+    
+    </table>  
+
+  
+
+
+
+
+  <!-- <router-outlet></router-outlet> -->
+</body>
+</html>
+
