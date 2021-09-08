@@ -17,29 +17,30 @@ import { DoctorLeaveComponent } from './doctor-leave/doctor-leave.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DoctorServiceService } from './doctor-service.service';
 import { UpdateAvailComponent } from './update-avail/update-avail.component';
+import { PatientComponent } from './patient/patient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
+
     LoginComponent,
-  
+
     DoctorProfileComponent,
-      
-       AddPrescriptionComponent,
-       PatientDetailsComponent,
-       DoctorLeaveComponent,
-       AddDoctorComponent,
-       UpdateAvailComponent
+
+    AddPrescriptionComponent,
+    PatientComponent,
+    DoctorLeaveComponent,
+    AddDoctorComponent,
+    UpdateAvailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [CommonUserServiceService,DoctorServiceService],
-  bootstrap: [AppComponent]
+  providers: [CommonUserServiceService, DoctorServiceService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
