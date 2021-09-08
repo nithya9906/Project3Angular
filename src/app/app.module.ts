@@ -17,6 +17,11 @@ import { DoctorLeaveComponent } from './doctor-leave/doctor-leave.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DoctorServiceService } from './doctor-service.service';
 import { UpdateAvailComponent } from './update-avail/update-avail.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AddReceptionistComponent } from './add-receptionist/add-receptionist.component';
+import { DocheaderComponent } from './doctor/docheader/docheader.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { UpdateAvailComponent } from './update-avail/update-avail.component';
        PatientDetailsComponent,
        DoctorLeaveComponent,
        AddDoctorComponent,
-       UpdateAvailComponent
+       UpdateAvailComponent,
+       UpdateProfileComponent,
+       UpdatePasswordComponent,
+       LogoutComponent,
+       AddReceptionistComponent,
+       DocheaderComponent
   ],
   imports: [
     BrowserModule,

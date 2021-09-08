@@ -1,0 +1,34 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Appointment ID:</th>
+            <td>{{value.applicationId}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Application Date</th>
+            <td>{{value.applicationDate}}</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">FirstName</th>
+            <td>{{value.patient.firstName}}</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">purpose</th>
+            <td>{{value.purpose}}</td>
+            
+          </tr>
+         
+  
+        </tbody>
+      </table>
+ 
+                 <button (click)="goPrescription()" class="btn btn-primary">Add prescription</button>
+                 <!--<a href="#" class="btn btn-primary">{{card.buttonText}}</a>-->
+ </div>
+         

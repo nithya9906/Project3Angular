@@ -49,7 +49,8 @@ export class LoginComponent implements OnInit {
       {
         this.comService.setUserLoggedIn(data1.userId);
         alert("Success");
-        this.router.navigate(['doctorProfile']);
+        this.router.navigate(['header']);
+       // this.router.navigate(['doctorProfile']);
     
 
       }

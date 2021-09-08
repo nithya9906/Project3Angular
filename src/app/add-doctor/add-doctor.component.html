@@ -1,7 +1,7 @@
 <div>
     <h1>{{message}}</h1>
 </div>
-<div class="container"  style="align: center;">
+<div class="container">
     <div class="row">
         <div class="col-md-6">
             <form>
@@ -26,13 +26,13 @@
 
                     <div class="form-group">
                         <label for="name">PHONE NO: </label>
-                        <input required type="number" [(ngModel)]="b.phno" name="bookPages" id="bookPages"
+                        <input required type="number" [(ngModel)]="b.phno" name="phno" id="phno"
                             class="form-control phone" maxlength="20000" placeholder="Doctor's contact number...." />
                     </div>
 
                     <div class="form-group">
                         <label for="salary">DOCTOR FEE: </label>
-                        <input class="form-control" type="number" [(ngModel)]="b.fees" name="bookPrice" id="bookPrice"
+                        <input class="form-control" type="number" [(ngModel)]="b.fees" name="fees" id="bookPrice" 
                             placeholder="Doctor Fee.." required />
                         <div id="errLast"></div>
                     </div>
@@ -41,12 +41,12 @@
                         <input name="type"  [(ngModel)]="type" type="radio" [value]="0" /> GENERAL
                         <input name="type"  [(ngModel)]="type" type="radio" [value]="1" /> SPECIALIST
                         <div *ngIf="type == 1">
-                            <label  (change)="changeWebsite($event)" placeholder="Choose specialization...." >  Choose specialization....</label>
+                            <label  (change)="changeWebsite($event)" placeholder="Choose specialization...." >  Choose specialization....</label><br>
                                
-                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="0">CARDIOLOGIST
-                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="1">NEUROLOGIST
-                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="2">ORTHOPEDIATRIST
-                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="3">DERMATOLOGIST
+                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="0">CARDIOLOGIST<br>
+                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="1">NEUROLOGIST<br>
+                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="2">ORTHOPEDIATRIST<br>
+                                <input name="specialization" type="radio" [(ngModel)]="specialization" [value]="3">DERMATOLOGIST<br>
                            
                         </div>
 
@@ -67,20 +67,20 @@
                         <input class="form-control"  [(ngModel)]="b.doctorAvailability.fromDay" name="readingAgeTo"
                             id="readingAgeFrom" placeholder="Upto which reading age can read" />
                         <label for="des">AVAILABLE TILL: </label>
-                        <input class="form-control" required type="text" [(ngModel)]="b.doctorAvailability.toDay" name="stock"
+                        <input class="form-control" required type="text" [(ngModel)]="b.doctorAvailability.toDay" name="toDay"
                             id="stock" placeholder="Enter stock no:" />
                     </div>
 
                     <div class="form-group">
                         <label for="des">FROM TIME:</label>
-                        <input type="time" class="form-control" required type="time" [(ngModel)]="b.doctorAvailability.fromTime" name="stock"
-                            id="stock" placeholder="Enter stock no:" />
+                        <input type="time" class="form-control" required type="time" [(ngModel)]="b.doctorAvailability.fromTime" name="fromTime"
+                            id="fromTime"  />
                     </div>
 
                     <div class="form-group">
                         <label for="des">TO TIME:</label>
-                        <input  class="form-control" required type="time" [(ngModel)]="b.doctorAvailability.toTime" name="stock"
-                            id="stock" placeholder="Enter stock no:" />
+                        <input  class="form-control" required type="time" [(ngModel)]="b.doctorAvailability.toTime" name="toTime"
+                            id="toTime"  />
                     </div>
 
                     <div class="form-group">

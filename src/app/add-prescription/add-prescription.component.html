@@ -8,7 +8,19 @@
           <label for="patientId">PATIENT ID :</label>
         </div>
         <div class="col col-md-8">
-          <input type="number" [(ngModel)]="p.patientId" name="patentId" placeholder="Patient Id" class="form-control">
+        
+         <p>{{val.patient.p_id}}</p> 
+        </div>   
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+        <div class="col col-md-4">
+          <label for="appointmentId">Appointment Id:</label>
+        </div>
+        <div class="col col-md-8">
+         
+       <p>{{val.applicationId}}</p> 
         </div>   
     </div>
   </div>
@@ -42,20 +54,12 @@
         </div>   
     </div>
   </div>
-  <div class="form-group">
-    <div class="row">
-        <div class="col col-md-4">
-          <label for="appointmentId">Appointment Id:</label>
-        </div>
-        <div class="col col-md-8">
-          <input type="number" [(ngModel)]="p.appointmentId" name="appointmentId" placeholder="appointmentId" class="form-control">
-        </div>   
-    </div>
-  </div>
+
   <br>
   <div>
     <button (click)='submit()' class="btn btn-primary">ADD</button>
   </div>
+  <br>
   <div>
     <button (click)='complete()' class="btn btn-primary">Completed</button>
   </div>

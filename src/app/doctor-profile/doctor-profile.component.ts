@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonUserServiceService } from '../common-user-service.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CommonUserServiceService } from '../common-user-service.service';
 })
 export class DoctorProfileComponent implements OnInit {
 value:any;
-  constructor(private http:HttpClient,private comService:CommonUserServiceService) { }
+  constructor(private http:HttpClient,private comService:CommonUserServiceService,private router:Router) { }
 
   ngOnInit(): void {
     let d=this.comService.getUserLoggedIn();
@@ -19,7 +20,10 @@ value:any;
 
   updateProfile()
   {
-    
+   this.router.navigate(['upProfile']); 
+  }
+  updatePassword(){
+    this.router.navigate(['upPassword']); 
   }
 
 }

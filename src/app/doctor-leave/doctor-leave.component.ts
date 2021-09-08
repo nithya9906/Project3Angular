@@ -21,7 +21,7 @@ docleave:DoctorLeave=new DoctorLeave();
     this.docleave.doctorId=this.comService.getUserLoggedIn();
     let res= this.http.post("http://localhost:9091/doctorController/bookleave",this.docleave);
     res.subscribe((data)=>console.log(data)); 
-    alert("success");
+    alert("Leave Updated");
 
   }
 
