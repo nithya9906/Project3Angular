@@ -1,0 +1,18 @@
+.form-group{
+    padding-top: 10px;
+}
+label{
+    padding-left: 5%;
+    text-align: justify;
+}
+.container{
+    width:60%;
+}
+button{
+    margin-left:25%;
+margin-right:25%;
+}
+form{
+    margin-top: 10%;
+    border: 2px solid green;
+}
