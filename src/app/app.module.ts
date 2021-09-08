@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { AllLoginComponent } from './all-login/all-login.component';
+import { PatientComponent } from './patient/patient.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AllLoginComponent } from './all-login/all-login.component';
     LoginComponent,
   
     DoctorProfileComponent,
-       AllLoginComponent
+       AllLoginComponent,
+       PatientComponent
   ],
   imports: [
     BrowserModule,
