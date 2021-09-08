@@ -10,7 +10,7 @@ import { Prescription } from '../Prescription';
 })
 export class AddPrescriptionComponent implements OnInit {
   d:any;
-  p:Prescription=new Prescription()
+  p:Prescription | any;
   constructor(private comService:CommonUserServiceService,private http:HttpClient) {
     
    // comService.setUserLoggedIn(14)
