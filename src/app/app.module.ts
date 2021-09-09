@@ -18,20 +18,25 @@ import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DoctorServiceService } from './doctor-service.service';
 import { UpdateAvailComponent } from './update-avail/update-avail.component';
 import { PatientComponent } from './patient/patient.component';
+import { AppointmentstatusComponent } from './appointmentstatus/appointmentstatus.component';
+import { DoctorStatusComponent } from './doctor-status/doctor-status.component';
+import { GeneratingreportComponent } from './generatingreport/generatingreport.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
-
     DoctorProfileComponent,
-
+    AppointmentstatusComponent,
     AddPrescriptionComponent,
     PatientComponent,
     DoctorLeaveComponent,
+    DoctorStatusComponent,
     AddDoctorComponent,
     UpdateAvailComponent,
+    GeneratingreportComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
