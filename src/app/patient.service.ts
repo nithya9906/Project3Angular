@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { Doctor } from './Doctor';
 import { Family } from './Family';
+
 import { Patient } from './Patient';
 
 @Injectable({

@@ -5,10 +5,11 @@ import { PatientService } from '../patient.service';
 
 import { Doctor } from '../Doctor';
 
-import { Family } from '../Family';
-import { Patient } from '../Patient';
+
 import { AppointmentService } from '../appointment.service';
 import { Appointment } from '../Appointment';
+import { Family } from '../Family';
+import { Patient } from '../Patient';
 
 @Component({
   selector: 'app-patient',

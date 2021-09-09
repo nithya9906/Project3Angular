@@ -1,4 +1,6 @@
-import { Patient } from './Patient';
+import { Patient } from "./Patient";
+
+
 
 export interface Family {
   family_id: number;
