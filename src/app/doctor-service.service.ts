@@ -15,10 +15,10 @@ doc:Doctor=new Doctor();
 
 
   public addDoctor(l:any):Observable<Doctor>{
-    return this.http.post<Doctor>("http://localhost:9091/doctorController/addDoctor",l);
+    return this.http.post<Doctor>("http://13.127.153.216:9090/doctorController/addDoctor",l);
   }
 
   public addReceptionist(r:any):Observable<Receptionist>{
-    return this.http.post<Receptionist>("http://localhost:9091/receptionistController/addReceptionist",r);
+    return this.http.post<Receptionist>("http://13.127.153.216:9090/receptionistController/addReceptionist",r);
   }
 }

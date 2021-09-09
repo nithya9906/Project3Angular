@@ -1,23 +1,46 @@
 <app-docheader></app-docheader>
 <div class="container">
-<h2 style="font-family: 'Times New Roman', Times, serif;color: blueviolet;">Profile</h2>
-                 <h4>First Name:</h4>
-                 <p>{{value.firstName}}</p>
-                 <h4>Last Name:</h4>
-                 <p>{{value.lastName}}</p>
-                 <h4>Email:</h4>
-                 <p>{{value.email}}</p>
-                 <h4>Phone No:</h4>
-                 <p>{{value.phno}}</p>
-                 
-                 <h4>Designation:</h4>
-                 <p>{{value.designation}} </p>
-                 <h4>Specialization:</h4>
-                 <p>{{value.specialization}}</p>
-    
-                 <button class="btn btn-primary" (click)="updateProfile()">Update</button><pre></pre>
-                 <button class="btn btn-primary" (click)="updatePassword()">Update Password</button>
-                 <!--<a href="#" class="btn btn-primary">{{card.buttonText}}</a>-->
+<!-- <h2 style="font-family: 'Times New Roman', Times, serif;color: blueviolet;">Profile</h2> -->
+<table class="table">
+        <thead>
+          <tr>
+                <h2 style="font-family: 'Times New Roman', Times, serif;color: blueviolet;padding-left: 70%;">Profile</h2>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">First Name:</th>
+            <td>{{value.firstName}}</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">Last Name:</th>
+            <td>{{value.lastName}}</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">Email:</th>
+            <td>{{value.email}}</td>
+          </tr>
+          <tr>
+                <th scope="row">Phone No:</th>
+                <td>{{value.phno}}</td>
+          </tr>
+          <tr>
+                <th scope="row">Designation:</th>
+                <td>{{value.designation}}</td>
+          </tr>
+          <tr>
+                <th scope="row">Specialization:</th>
+                <td>{{value.specialization}}</td>
+          </tr>
+          <tr>
+                <td> <button class="btn btn-primary" (click)="updateProfile()">Update</button></td>
+                <td> <button class="btn btn-primary" (click)="updatePassword()">Update Password</button></td>
+          </tr>
+        </tbody>
+      </table>
+              
            
          </div>
       

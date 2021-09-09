@@ -45,12 +45,12 @@ export class AddPrescriptionComponent implements OnInit {
   console.log(this.pid,this.appid);
     console.log(this.p);
    
-    let res= this.http.post("http://localhost:9091/addPrescription",this.p);
+    let res= this.http.post("http://13.127.153.216:9090/addPrescription",this.p);
     res.subscribe((data)=>this.d=data); 
   }
   complete(){
 
-    let res1= this.http.post("http://localhost:9091/receptionistController/completedAppointment/"+this.p.patientId+"/"+this.p.doctorFees,this.val);
+    let res1= this.http.post("http://13.127.153.216:9090/receptionistController/completedAppointment/"+this.p.patientId+"/"+this.p.doctorFees,this.val);
     res1.subscribe((data1)=>console.log(data1)); 
     alert("Appointment completed");
 

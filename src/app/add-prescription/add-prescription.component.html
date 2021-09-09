@@ -1,5 +1,5 @@
 <app-docheader></app-docheader>
-<div class="container">
+<div class="container"*ngIf="val">
   <form>
   
 <div class="form-group">
@@ -58,7 +58,8 @@
   <br>
   <div class="btn-group" style="display:inline-block;">
     <button (click)='submit()' class="btn btn-primary">ADD</button>
-    <br>
+   </div>
+   <div class="btn-group" style="display:inline-block;">
     <button (click)='complete()' class="btn btn-primary">Completed</button>
   </div>
     <br>

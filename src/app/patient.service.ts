@@ -19,24 +19,24 @@ export class PatientService {
   // };
 
   getPatientById(id: number): Observable<Patient> {
-    const baseUrl = `http://localhost:9091/patient/${id}`;
+    const baseUrl = `http://13.127.153.216:9090/patient/${id}`;
     return this._http.get<Patient>(baseUrl);
   }
 
   getAllDoctors(): Observable<Doctor> {
-    const baseUrl = 'http://localhost:9091/doctorController/doctors';
+    const baseUrl = 'http://13.127.153.216:9090/doctorController/doctors';
     return this._http.get<Doctor>(baseUrl);
   }
   addFamilymembers(member: any, pid: number): Observable<Family> {
-    const baseUrl = `http://localhost:9091/patient/${pid}/family/addmember`;
+    const baseUrl = `http://13.127.153.216:9090/patient/${pid}/family/addmember`;
     return this._http.post<Family>(baseUrl, member);
   }
   getFamilyMembers(pid: number): Observable<Patient> {
-    const baseUrl = `http://localhost:9091/patient/${pid}`;
+    const baseUrl = `http://13.127.153.216:9090/patient/${pid}`;
     return this._http.get<Patient>(baseUrl);
   }
   updatePatient(pid: number, patient: any): Observable<Patient> {
-    const baseUrl = `http://localhost:9091/update/patient/${pid}`;
+    const baseUrl = `http://13.127.153.216:9090/update/patient/${pid}`;
     return this._http.put<Patient>(baseUrl, patient);
   }
 }

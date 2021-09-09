@@ -12,15 +12,21 @@ import { CommonUserServiceService } from '../common-user-service.service';
 export class PatientDetailsComponent implements OnInit {
   value: any;
   constructor(
-    private appservice: AppointmentService,
+   
     private comService: CommonUserServiceService,
-    private router: Router
+    private router: Router,private http:HttpClient
   ) {}
+  // private appservice: AppointmentService,
 
   ngOnInit(): void {
-    let docid = this.comService.getUserLoggedIn();
-    console.log('Doctorid:' + docid);
-    this.value = this.appservice.getAppointment;
+    let docid=this.comService.getUserLoggedIn();
+    console.log("Doctorid:"+docid);
+    let res= this.http.get("http://13.127.153.216:9090/appointment/getcurrentPatient/"+docid);
+    res.subscribe((data)=>console.log(data));
+    res.subscribe((data)=>this.value=data);
+    // let docid = this.comService.getUserLoggedIn();
+    // console.log('Doctorid:' + docid);
+    // this.value = this.appservice.getAppointment;
   }
 
   goPrescription() {

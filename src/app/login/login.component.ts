@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       if(data1.role=="doctor")
       {
         this.comService.setUserLoggedIn(data1.userId);
-        alert("Success");
+       // alert("Success");
         this.router.navigate(['login', 'header']);
        // this.router.navigate(['doctorProfile']);
     
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       else if(data1.role=="patient")
       {
         this.comService.setUserLoggedIn(data1.userId);
-        alert("Success");
+       // alert("Success");
         this.router.navigate(['login', 'patheader']);
        
 
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
       else if(data1.role=="receptionist")
       {
         this.comService.setUserLoggedIn(data1.userId);
-        alert("Receptionist Success");
+      //  alert("Receptionist Success");
         this.router.navigate(['login', 'rheader']);
 
       }
@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
       {
         this.comService.setUserLoggedIn(data1.userId);
 
-        alert("Success");
+       // alert("Success");
         this.router.navigate(['login', 'aheader']);
 
       }

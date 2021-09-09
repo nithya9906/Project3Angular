@@ -14,7 +14,7 @@ value:any;
 
   ngOnInit(): void {
     let d=this.comService.getUserLoggedIn();
-    let res= this.http.get("http://localhost:9091/doctorController/doctorById/"+d);
+    let res= this.http.get("http://13.127.153.216:9090/doctorController/doctorById/"+d);
     res.subscribe((data)=>this.value=data); 
   }
 

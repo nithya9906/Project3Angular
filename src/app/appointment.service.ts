@@ -16,7 +16,7 @@ export class AppointmentService {
   constructor(private http: HttpClient) {}
 
   bookAppointment(appointment: any, pid: number): Observable<Appointment> {
-    const baseUrl = `http://localhost:9091/appointment/book/${pid}`;
+    const baseUrl = `http://13.127.153.216:9090/appointment/book/${pid}`;
 
     return this.http.post<Appointment>(baseUrl, appointment);
   }
@@ -26,24 +26,24 @@ export class AppointmentService {
     pid: number,
     fid: number
   ): Observable<Appointment> {
-    const baseUrl = `http://localhost:9091/appointment/book/${pid}/${fid}`;
+    const baseUrl = `http://13.127.153.216:9090/appointment/bookforFamily/${pid}/${fid}`;
 
     return this.http.post<Appointment>(baseUrl, appointment);
   }
   getAppointments(pid: number): Observable<Appointment> {
-    const baseUrl = `http://localhost:9091/appointment/patient/${pid}/getappointment`;
+    const baseUrl = `http://13.127.153.216:9090/appointment/patient/${pid}/getappointment`;
     return this.http.get<Appointment>(baseUrl);
   }
 
   generateappointment(date: Date): Observable<Appointment> {
     return this.http.get<Appointment>(
-      `http://localhost:9091/appointment/getappointmentbydate/?date=${date}`
+      `http://13.127.153.216:9090/appointment/getappointmentbydate/?date=${date}`
     );
   }
 
   generateReport(date: any): Observable<DaywiseData> {
     return this.http.post<DaywiseData>(
-      'http://localhost:9091/receptionistController/gettotalNumbers',
+      'http://13.127.153.216:9090/receptionistController/gettotalNumbers',
       date
     );
   }
@@ -53,14 +53,14 @@ export class AppointmentService {
     appointmentObj: AppointmentCancel
   ): Observable<Appointment> {
     return this.http.post<Appointment>(
-      `http://localhost:9091/receptionistController/cancelAppointment/${pid}`,
+      `http://13.127.153.216:9090/receptionistController/cancelAppointment/${pid}`,
       appointmentObj
     );
   }
 
   doctorStatus(): Observable<LeaveStatus> {
     return this.http.get<LeaveStatus>(
-      'http://localhost:9091/doctorController/getallLeaves'
+      'http://13.127.153.216:9090/doctorController/getallLeaves'
     );
   }
 
@@ -69,7 +69,7 @@ export class AppointmentService {
     appointmentObj: AppointmentCancel
   ): Observable<Appointment> {
     this.getAppointment = this.http.post<Appointment>(
-      `http://localhost:9091/receptionistController/confirmAppointment/${pid}`,
+      `http://13.127.153.216:9090/receptionistController/confirmAppointment/${pid}`,
       appointmentObj
     );
     return this.getAppointment;
@@ -80,7 +80,7 @@ export class AppointmentService {
     appointmentObj: AppointmentCancel
   ): Observable<Appointment> {
     return this.http.post<Appointment>(
-      `http://localhost:9091/receptionistController/consultingnow/${pid}`,
+      `http://13.127.153.216:9090/receptionistController/consultingnow/${pid}`,
       appointmentObj
     );
   }
@@ -88,7 +88,7 @@ export class AppointmentService {
   confirmleave(leaveObj: LeaveStatus) {
     this.http
       .post(
-        `http://localhost:9091/receptionistController/cancelforoneDoctor`,
+        `http://13.127.153.216:9090/receptionistController/cancelforoneDoctor`,
         leaveObj
       )
       .subscribe();
@@ -98,7 +98,7 @@ export class AppointmentService {
     appointmentObj: AppointmentCancel
   ): Observable<Prescription> {
     return this.http.post<Prescription>(
-      'http://localhost:9091/getPrescriptionsByAppId',
+      'http://13.127.153.216:9090/getPrescriptionsByAppId',
       appointmentObj
     );
   }

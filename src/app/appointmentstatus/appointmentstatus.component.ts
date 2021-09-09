@@ -135,11 +135,11 @@ export class AppointmentstatusComponent implements OnInit {
                   { text: 'Details', bold: true },
                   { text: 'Description', bold: true },
                 ],
-                // ['Prescription Id', this.prescription.presId.json()],
-                // ['Booking Id', this.prescription.appointmentId.json()],
-                // ['PatientId', this.prescription.patientId.json()],
+                ['Prescription Id', this.prescription.presId],
+                ['Booking Id', this.prescription.appointmentId],
+                ['PatientId', this.prescription.patientId],
 
-                ['Description', this.prescription.description.json()],
+                ['Description', this.prescription.description],
                 // ['Prescription Id', '1'],
                 // ['Booking Id', '1'],
 

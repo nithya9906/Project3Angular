@@ -11,6 +11,7 @@ import { Appointment } from '../Appointment';
 import { Family } from '../Family';
 import { Patient } from '../Patient';
 
+
 @Component({
   selector: 'app-patient',
   templateUrl: './patient.component.html',
@@ -89,7 +90,7 @@ export class PatientComponent implements OnInit {
       appointmentData = {
         applicationDate: this.apptDate,
         purpose: this.purpose,
-        availabilty: 'pending',
+        availability: 'pending',
         doctor: { doctorId: this.selectedDoctorId },
         family: { family_id: this.selectedFamilyId },
       };
@@ -104,7 +105,7 @@ export class PatientComponent implements OnInit {
       appointmentData = {
         applicationDate: this.apptDate,
         purpose: this.purpose,
-        availabilty: 'pending',
+        availability: 'pending',
         doctor: { doctorId: this.selectedDoctorId },
       };
       this._appointmentService

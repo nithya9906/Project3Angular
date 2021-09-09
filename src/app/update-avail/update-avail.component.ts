@@ -16,7 +16,7 @@ doc:Doctor=new Doctor()
 
   ngOnInit(): void {
     let id=this.comService.getUserLoggedIn();
-   let res= this.http.get("http://localhost:9091/doctorController/doctorById/"+id);
+   let res= this.http.get("http://13.127.153.216:9090/doctorController/doctorById/"+id);
     res.subscribe((data)=>this.b=data); 
   }
   register(){
