@@ -1,7 +1,7 @@
 import { Prescription } from './../Prescription';
 import { AppointmentCancel } from './../AppointmentCancel';
 import { AppointmentService } from './../appointment.service';
-import { Appointment } from './../appointment';
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,6 +12,7 @@ const pdfMakeX = require('pdfmake/build/pdfmake.js');
 const pdfFontsX = require('pdfmake-unicode/dist/pdfmake-unicode.js');
 pdfMakeX.vfs = pdfFontsX.pdfMake.vfs;
 import * as pdfMake from 'pdfmake/build/pdfMake';
+import { Appointment } from '../Appointment';
 
 @Component({
   selector: 'app-appointmentstatus',

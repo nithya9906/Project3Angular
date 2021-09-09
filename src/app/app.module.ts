@@ -17,26 +17,39 @@ import { DoctorLeaveComponent } from './doctor-leave/doctor-leave.component';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DoctorServiceService } from './doctor-service.service';
 import { UpdateAvailComponent } from './update-avail/update-avail.component';
-import { PatientComponent } from './patient/patient.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AddReceptionistComponent } from './add-receptionist/add-receptionist.component';
+import { DocheaderComponent } from './doctor/docheader/docheader.component';
+import { AdminheaderComponent } from './admin/adminheader/adminheader.component';
+import { RecepheaderComponent } from './receptionist/recepheader/recepheader.component';
 import { AppointmentstatusComponent } from './appointmentstatus/appointmentstatus.component';
-import { DoctorStatusComponent } from './doctor-status/doctor-status.component';
 import { GeneratingreportComponent } from './generatingreport/generatingreport.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DoctorStatusComponent } from './doctor-status/doctor-status.component';
+import { PatientComponent } from './patient/patient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DoctorProfileComponent,
-    AppointmentstatusComponent,
-    AddPrescriptionComponent,
-    PatientComponent,
-    DoctorLeaveComponent,
-    DoctorStatusComponent,
-    AddDoctorComponent,
-    UpdateAvailComponent,
-    GeneratingreportComponent,
-    DashboardComponent,
+      DoctorStatusComponent,
+       AddPrescriptionComponent,
+       PatientDetailsComponent,
+       DoctorLeaveComponent,
+       AddDoctorComponent,
+       UpdateAvailComponent,
+       UpdateProfileComponent,
+       UpdatePasswordComponent,
+       LogoutComponent,
+       AddReceptionistComponent,
+       DocheaderComponent,
+       AdminheaderComponent,
+       RecepheaderComponent,
+       GeneratingreportComponent,
+       AppointmentstatusComponent,
+       PatientComponent
   ],
   imports: [
     BrowserModule,

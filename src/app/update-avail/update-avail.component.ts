@@ -20,6 +20,9 @@ doc:Doctor=new Doctor()
     res.subscribe((data)=>this.b=data); 
   }
   register(){
-
+    let id=this.comService.getUserLoggedIn();
+    let res= this.http.put("http://localhost:9091/doctorController/updateDoctor",this.b);
+     res.subscribe((data)=>this.b=data); 
+     alert("Updated");
   }
 }

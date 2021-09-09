@@ -1,16 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Appointment } from './appointment';
+
 import { Prescription } from './Prescription';
 import { DaywiseData } from './DaywiseData';
-import { AppointmentCancel } from './AppointmentCancel';
 import { LeaveStatus } from './LeaveStatus';
+import { AppointmentCancel } from './AppointmentCancel';
+import { Appointment } from './Appointment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppointmentService {
+  getAppointment: Appointment | any;
   constructor(private http: HttpClient) {}
 
   bookAppointment(appointment: any, pid: number): Observable<Appointment> {
@@ -66,10 +68,11 @@ export class AppointmentService {
     pid: number,
     appointmentObj: AppointmentCancel
   ): Observable<Appointment> {
-    return this.http.post<Appointment>(
+    this.getAppointment = this.http.post<Appointment>(
       `http://localhost:9091/receptionistController/confirmAppointment/${pid}`,
       appointmentObj
     );
+    return this.getAppointment;
   }
 
   goingin(

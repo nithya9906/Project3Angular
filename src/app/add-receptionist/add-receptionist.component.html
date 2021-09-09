@@ -1,0 +1,38 @@
+<app-adminheader></app-adminheader>
+<div>
+    <h1>{{message}}</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Receptionist DETAILS :<span class="req">
+                              </span></legend>
+                    <div class="form-group">
+                        <label for="name"> NAME :</label>
+                        <input required type="text" [(ngModel)]="r.rname" name="rname" id="rname"
+                            class="form-control" maxlength="28" placeholder="Enter name...." />
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="name">PHONE NO: </label>
+                        <input required type="number" [(ngModel)]="r.rphnNo" name="rphnNo" id="rphnNo"
+                            class="form-control" placeholder="Enter contact number...." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">EMAIL ID: </label>
+                        <input required type="email" [(ngModel)]="r.remail" name="remail" id="remail"
+                            class="form-control"  placeholder="Enter Email id...." />
+                    </div>
+              <br>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="register()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+    </div>
+</div>

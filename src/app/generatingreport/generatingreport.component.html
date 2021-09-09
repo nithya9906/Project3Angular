@@ -22,8 +22,7 @@
         </tr>
 
         <tr *ngFor = "let row of daywiseDataObj">
-            <td>{{row.date| date: "MM/dd/yy"
-            }}</td>
+            <td>{{row.date }}</td><!--| date: "MM/dd/yy"-->
             <td>{{row.docId}}</td>
             <td>{{row.docName}}</td>
             <td>{{row.totalPatients}}</td>

@@ -1,9 +1,11 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Patient } from '../patient';
+
 import { PatientService } from '../patient.service';
-import { Family } from '../family';
-import { Appointment } from '../appointment';
+
 import { Doctor } from '../Doctor';
+import { Appointment } from '../Appointment';
+import { Family } from '../Family';
+import { Patient } from '../Patient';
 import { AppointmentService } from '../appointment.service';
 
 @Component({
@@ -19,7 +21,7 @@ export class PatientComponent implements OnInit {
   // bookappointment: Appointment | any;
   appointment: Appointment | any = [];
   patientFamily = 'patient1';
-  members: Family[] = [];
+  members: Family | any;
   categoryDoctors: Doctor[] = [];
   selectedDoctorId = -1;
   selectedFamilyId = -1;

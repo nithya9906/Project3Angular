@@ -1,13 +1,13 @@
 import { Doctor } from './Doctor';
-import { Family } from './family';
-import { Patient } from './patient';
+import { Family } from './Family';
+import { Patient } from './Patient';
 
 export interface Appointment {
   applicationId: number;
-  applicationDate: Date;
+  applicationDate: Date | any;
   purpose: string;
   availability: string;
   patient: Patient;
-  family: Family;
+  member: Family;
   doctor: Doctor;
 }

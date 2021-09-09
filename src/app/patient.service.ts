@@ -1,10 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Appointment } from './appointment';
+
 import { Doctor } from './Doctor';
-import { Family } from './family';
-import { Patient } from './patient';
+import { Family } from './Family';
+import { Patient } from './Patient';
 
 @Injectable({
   providedIn: 'root',

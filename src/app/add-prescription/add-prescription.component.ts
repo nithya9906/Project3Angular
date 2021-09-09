@@ -10,7 +10,10 @@ import { Prescription } from '../Prescription';
 })
 export class AddPrescriptionComponent implements OnInit {
   d:any;
-  p:Prescription | any;
+  val:any;
+  pid:number=0;
+  appid:number=0;
+  p:Prescription|any={};
   constructor(private comService:CommonUserServiceService,private http:HttpClient) {
     
    // comService.setUserLoggedIn(14)
@@ -18,28 +21,40 @@ export class AddPrescriptionComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    let docid=this.comService.getUserLoggedIn();
+    console.log("Doctorid:"+docid);
+    
+    let res= this.http.get("http://localhost:9091/appointment/getcurrentPatient/"+docid);
+    res.subscribe((data)=>console.log(data));
+    res.subscribe((data)=>
+    {
+    this.val=data;
+    this.pid=this.val.patient.p_id;
+   this.appid=this.val.applicationId;
+    }
+    
+    );
+    // this.pid=this.val.patient.p_id;
+    // this.appid=this.val.applicationId;
+    // console.log("PPP"+this.pid);
   }
   
   submit(){
-   
+  this.p.patientId=this.pid;
+  this.p.appointmentId=this.appid;
+  console.log(this.pid,this.appid);
     console.log(this.p);
-    let res= this.http.post("http://localhost:9091/PrepController/addPrescription",this.p);
-    res.subscribe((data)=>this.d=data); 
-  //  let res1= this.http.post("http://localhost:9091/PrepController/addPrescription",this.p);
-   // res.subscribe((data1)=>console.log(data1)); 
-    if(this.d==null)
-    {
-      alert("Not Submitted");
-    }
-    else{
-      alert(" Submitted");
-    }
    
-    //res.subscribe((data)=>this.data1=data); 
+    let res= this.http.post("http://localhost:9091/addPrescription",this.p);
+    res.subscribe((data)=>this.d=data); 
   }
   complete(){
-    let res1= this.http.post("http://localhost:9091/receptionistController/"+this.p.patientId+"/"+this.p.doctorFees,this.p);
+
+    let res1= this.http.post("http://localhost:9091/receptionistController/completedAppointment/"+this.p.patientId+"/"+this.p.doctorFees,this.val);
     res1.subscribe((data1)=>console.log(data1)); 
+    alert("Appointment completed");
+
+
   }
 
 }

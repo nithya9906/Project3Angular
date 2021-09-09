@@ -69,10 +69,8 @@
   
    <tr *ngFor="let row of value">
         <td>{{row.applicationId}}</td>
-        <td>{{row.applicationDate| date: "MM/dd/yy"
-        }}</td>
-        <td>{{row.applicationDate| date: "hh:mm a":"GMT"
-        }}</td>
+        <td>{{row.applicationDate}}</td><!-- | date: "MM/dd/yy"    | date: "hh:mm a":"GM-->
+        <td>{{row.applicationDate }}</td>
         <td>{{row.purpose}}</td>
         <td>{{row.availability}}</td>
         <td>{{row.doctor.doctorId}}</td>
@@ -92,7 +90,7 @@
 
 
 
-  <router-outlet></router-outlet>
+  <!-- <router-outlet></router-outlet> -->
 </body>
 </html>
 

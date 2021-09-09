@@ -1,7 +1,10 @@
-import { AppointmentService } from './../appointment.service';
-import { DaywiseData } from './../DaywiseData';
+
+
 import { Component, OnInit } from '@angular/core';
+import { AppointmentService } from '../appointment.service';
 import { DateFetch } from '../DateFetch';
+import { DaywiseData } from '../DaywiseData';
+
 
 
 @Component({

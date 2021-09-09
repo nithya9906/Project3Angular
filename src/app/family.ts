@@ -1,10 +1,13 @@
+import { Patient } from './Patient';
+
 export interface Family {
   family_id: number;
   firstName: string;
   lastName: string;
   age: number;
-  gender: string;
-  mobileNo: string;
+  gender: String;
+  mobileNo: any;
   address: string;
-  email: string;
+  email: any;
+  patient: Patient;
 }
