@@ -1,12 +1,14 @@
+import { CommonUserServiceService } from './../common-user-service.service';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 import { PatientService } from '../patient.service';
 
 import { Doctor } from '../Doctor';
-import { Appointment } from '../Appointment';
+
 import { Family } from '../Family';
 import { Patient } from '../Patient';
 import { AppointmentService } from '../appointment.service';
+import { Appointment } from '../Appointment';
 
 @Component({
   selector: 'app-patient',
@@ -37,7 +39,7 @@ export class PatientComponent implements OnInit {
 
   constructor(
     private _patientservice: PatientService,
-    private _appointmentService: AppointmentService
+    private _appointmentService: AppointmentService,private comService:CommonUserServiceService
   ) {}
 
   tabs = new Map<string, string>([
@@ -51,7 +53,8 @@ export class PatientComponent implements OnInit {
   defaultOrderFn = () => 0;
 
   ngOnInit() {
-    this._patientservice.getPatientById(1).subscribe((data) => {
+    let d=this.comService.getUserLoggedIn();
+    this._patientservice.getPatientById(d).subscribe((data) => {
       this.patient = data;
       this._patientservice.getAllDoctors().subscribe((data: any) => {
         this.doctors = data;

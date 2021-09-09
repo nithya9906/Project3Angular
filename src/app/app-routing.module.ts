@@ -1,10 +1,11 @@
+import { PatientComponent } from './patient/patient.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { AddPrescriptionComponent } from './add-prescription/add-prescription.component';
 import { AddReceptionistComponent } from './add-receptionist/add-receptionist.component';
 import { AdminheaderComponent } from './admin/adminheader/adminheader.component';
-import { AllrequestComponent } from './allrequest/allrequest.component';
+//import { AllrequestComponent } from './allrequest/allrequest.component';
 import { AppointmentstatusComponent } from './appointmentstatus/appointmentstatus.component';
 
 import { DoctorLeaveComponent } from './doctor-leave/doctor-leave.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
 {path:'login/rheader',component:RecepheaderComponent},
 {path:'login/doctorstatus',component:DoctorStatusComponent},
 {path:'login/generatingreport',component:GeneratingreportComponent},
-{path:'login/appointment',component:AppointmentstatusComponent}
+{path:'login/appointment',component:AppointmentstatusComponent},
+{path:'login/patheader',component:PatientComponent}
 // {path: 'login/appointment/allrequest',component:AllrequestComponent}
 
 ];
