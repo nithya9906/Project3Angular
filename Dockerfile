@@ -10,9 +10,9 @@ COPY ./ /usr/local/app/
 
 # Install all the dependencies
 RUN npm install
-npm install --save pdfmake
-npm install pdfmake-unicode --save
-npm install @types/pdfmake --save-dev
+RUN npm install --save pdfmake
+RUN npm install pdfmake-unicode --save
+RUN npm install @types/pdfmake --save-dev
 # Generate the build of the application
 RUN npm run build --prod
 
